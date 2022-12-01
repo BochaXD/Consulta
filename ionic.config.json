@@ -1,0 +1,7 @@
+{
+  "name": "Consulta base",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
