@@ -1,20 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Blank </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Consulta</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <label>Consulta</label>
+  <form (ngSubmit)="getUsuariosByCedula()">
+    <input
+      type="text"
+      placeholder="1709876543"
+      name="cedula"
+      [(ngModel)]="cedula"
+    />
+    <input type="submit" />
+  </form>
+  <div></div>
 </ion-content>
