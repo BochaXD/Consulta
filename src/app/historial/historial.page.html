@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Historial</ion-title>
+  </ion-toolbar>
+</ion-header>
+<br />
+<table>
+  <thead>
+    <tr>
+      <th>Cedula</th>
+      <th>Nombre</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of userInArray">
+    <tr>
+      <td>{{item.cedula}}</td>
+      <td>{{item.nombre}}</td>
+    </tr>
+  </tbody>
+  <!--   <div *ngFor="let item of info">
+      <hr />
+      <label>{{item.cedula}}</label>
+      <label>{{item.nombre}}</label>
+    </div> -->
+</table>
+<br />
+<!-- <div *ngFor="let item of userInArray">
+  <br />
+  <label class="label1">Cedula:</label>
+  <label class="label2">{{item.cedula}}</label>
+  <label class="label1">Nombre:</label>
+  <label class="label2">{{item.nombre}}</label>
+  <br />
+</div> -->
+
+<button (click)="getHistorialUser()" class="pulse">Actualizar</button>
+<ion-content> </ion-content>

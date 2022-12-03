@@ -1,74 +1,12 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.label1 {
+  font-size: 18px;
+  margin-left: 10px;
+  margin-top: 30px;
 }
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
-/* Input Style */
-$input-height: 75px;
-form {
-  position: relative;
-}
-form input {
-  background: lighten(rgb(243, 243, 251), 5%);
-  color: rgb(143, 143, 214);
-  width: 200px;
-  height: 50px;
-  border: 0;
-  padding: 20px 40px;
-  margin: 10;
-  margin-left: 20px;
-
-  &:focus {
-    outline: none;
-  }
-
-  &::placeholder {
-    color: rgb(143, 143, 214);
-    font-weight: 100;
-  }
-}
-
-label {
-  font-size: 16px;
-  line-height: 22px;
-  margin-left: 30px;
-  margin-top: 10px;
-}
-/* input {
-  font-size: 16px;
-  line-height: 22px;
-  margin-left: 30px;
-  margin-top: 20px;
-  margin-block-end: 10px;
-} */
-h1 {
-  font-size: 20px;
-  line-height: 26px;
-  margin-left: 30px;
-  margin-top: 10px;
+.label2 {
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 30px;
 }
 .pulse:hover,
 .pulse:focus {
@@ -98,7 +36,7 @@ button {
   &:hover,
   &:focus {
     border-color: var(--hover);
-    color: rgb(209, 182, 182);
+    color: #fff;
   }
 }
 button {

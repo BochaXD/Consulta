@@ -6,19 +6,21 @@ import {
 } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 import 'firebase/firestore';
-
+import { DatosInfo } from '../interfaces/usuarios';
 @Injectable({ providedIn: 'root' })
 export class FirestoreService {
+  usuariosInfo: DatosInfo = new DatosInfo();
   constructor(private af: AngularFirestore) {}
 
   getDatos() {
     return this.af.collection('cedulas').valueChanges();
   }
-  getUsuariosByCedula(cedula: number) {
-    return this.af.collection('cedulas', (ref) =>
-      ref.where('cedula', '==', cedula)
-    );
+  getUsuariosByCedula(cedula: any) {
+    return this.af
+      .collection('cedulas', (ref) => ref.where(cedula, '==', cedula))
+      .valueChanges();
   }
+
   /*   getCollectionParameters<tipo>(path: string, parametro: string, value: string) {
     const dataCollection: AngularFirestoreCollection<tipo> =
       this.angularFirestore.collection<tipo>( path, ref => ref.where( parametro, '==', value ) );
