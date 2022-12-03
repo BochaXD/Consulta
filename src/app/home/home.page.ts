@@ -26,5 +26,13 @@ export class HomePage {
     } else {
       console.log('Usuario no Encontrado');
     }
+    });
+  }
+  guardarDatosConsulta() {
+    let userInArray = [];
+    userInArray.push(this.info);
+    let transactionObjJson = JSON.stringify(this.info);
+    localStorage.setItem('info', transactionObjJson);
+    console.log('info ' + transactionObjJson);
   }
 }
