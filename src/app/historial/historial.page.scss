@@ -1,0 +1,98 @@
+.label1 {
+  font-size: 18px;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+.label2 {
+  font-size: 15px;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+.pulse:hover,
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+$colors: (
+  pulse: #55608f,
+);
+
+@each $button, $color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 45deg)};
+  }
+}
+button {
+  color: var(--color);
+  transition: 0.25s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--hover);
+    color: #fff;
+  }
+}
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  width: 60px;
+  height: 40px;
+  line-height: 1;
+  margin: 0.5em;
+  font-size: 13px;
+}
+table {
+  margin-left: 6px;
+  width: 400px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(210, 194, 194);
+}
+
+th {
+  text-align: left;
+}
+
+thead {
+  th {
+    background-color: #55608f;
+  }
+}
+
+tbody {
+  tr {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+  td {
+    position: relative;
+    &:hover {
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+        background-color: rgba(255, 255, 255, 0.2);
+        z-index: -1;
+      }
+    }
+  }
+}

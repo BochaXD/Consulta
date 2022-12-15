@@ -1,0 +1,58 @@
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+
+</ion-app>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Consulta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Consulta</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <form (ngSubmit)="submitForm() ">
+    <input
+      type="text"
+      placeholder="1709876543"
+      name="cedula"
+      id="cedula"
+      value="Consultar"
+      [(ngModel)]="ced"
+    />
+    <input
+      type="text"
+      placeholder="Nombre"
+      name="nombre"
+      id="nombre"
+      value="Consultar"
+      [(ngModel)]="nombre"
+    />
+    <button type="submit" class="pulse">Consultar</button>
+  </form>
+
+  <div></div>
+  <table>
+    <thead>
+      <tr>
+        <th>Cedula</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of info">
+      <tr>
+        <td>{{item.cedula}}</td>
+        <td>{{item.nombre}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <footer>
+    <button (click)="guardarDatosConsulta()" class="pulse">Guardar</button>
+  </footer>
+</ion-content>
+

@@ -1,0 +1,40 @@
+<ion-header> </ion-header>
+
+<ion-content>
+  <div class="login-box">
+    <h2>Login Radical</h2>
+    <form>
+      <div class="user-box">
+        <input
+          type="text"
+          name=""
+          required=""
+          [(ngModel)]="loginObject.userName"
+          [ngModelOptions]="{standalone: true}"
+        />
+        <label>Usuario</label>
+      </div>
+      <div class="user-box">
+        <input
+          type="email"
+          name=""
+          required=""
+          [(ngModel)]="loginObject.email"
+          [ngModelOptions]="{standalone: true}"
+        />
+        <label>Email</label>
+      </div>
+      <div class="user-box">
+        <input
+          type="password"
+          name=""
+          required=""
+          [(ngModel)]="loginObject.password"
+          [ngModelOptions]="{standalone: true}"
+        />
+        <label>Contraseña</label>
+      </div>
+      <button type="submit" class="pulse" (click)="onLogin()">Ingresar</button>
+    </form>
+  </div>
+</ion-content>

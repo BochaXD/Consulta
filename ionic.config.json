@@ -1,0 +1,8 @@
+{
+  "name": "Consulta base",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
